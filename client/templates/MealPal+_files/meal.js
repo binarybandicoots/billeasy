@@ -12,7 +12,6 @@ angular.module('mealpal')
     this.handleSubmit = () => {
       axios.post(`/share`, {
         diner: this.diner,
-        eventID: id,
         receiptItems: $scope.receiptItems.filter((item) => item.isShare).map(item => item._id)
       })
       .then(res => {
